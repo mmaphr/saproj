@@ -1,0 +1,12 @@
+com\example\sa\g22\demo\Repository\ProposalRepository.class
+com\example\sa\g22\demo\Entity\User.class
+com\example\sa\g22\demo\Repository\ShippingStatusRepository.class
+com\example\sa\g22\demo\DemoApplication.class
+com\example\sa\g22\demo\Controller\ShippingController.class
+com\example\sa\g22\demo\Repository\ShippingRepository.class
+com\example\sa\g22\demo\Entity\Shipping.class
+com\example\sa\g22\demo\Entity\Proposal.class
+com\example\sa\g22\demo\Entity\Province.class
+com\example\sa\g22\demo\Repository\UserRepository.class
+com\example\sa\g22\demo\Repository\ProvinceRepository.class
+com\example\sa\g22\demo\Entity\ShippingStatus.class
