@@ -1,0 +1,67 @@
+<div class="blackground" align = "center" >
+  <div class="form">
+    <h1 align = "left" >สถานะการจัดส่ง (Shipping Status)</h1>
+  
+    <p align = "left" >อัพเดทสถานะการจัดส่ง </p>
+    <hr>
+  
+    <mat-table [dataSource]="shippingInfo" class="mat-elevation-z8">
+      
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+        <mat-cell *matCellDef="let element" >{{element.id}}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef> วันที่ </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.date}} </mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="shipper">
+        <mat-header-cell *matHeaderCellDef> ชื่อผู้ส่ง </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.shipper}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="receiver">
+        <mat-header-cell *matHeaderCellDef> ชื่อผู้รับ </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.receiver}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="address">
+        <mat-header-cell *matHeaderCellDef> ที่อยู่ที่ส่งไป </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.address}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="agency">
+        <mat-header-cell *matHeaderCellDef> หน่วยงาน </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.agency}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="postcode">
+        <mat-header-cell *matHeaderCellDef> รหัสไปรษณีย์ </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.postcode}} </mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="trackingNo">
+        <mat-header-cell *matHeaderCellDef> Tracking No. </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.trackingNo}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="shippingstatus">
+        <mat-header-cell *matHeaderCellDef> สถานะการจัดส่ง </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.shippingStatus.shippingStatusName}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="update">
+        <mat-header-cell *matHeaderCellDef> หมายเหตุ </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button mat-flat-button (click)= "save(element.id)"> อัพเดท </button>
+        </mat-cell>
+      </ng-container>
+    
+      <mat-header-row *matHeaderRowDef="dataColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: dataColumns;"></mat-row>
+    </mat-table>
+
+  </div>
+</div>
